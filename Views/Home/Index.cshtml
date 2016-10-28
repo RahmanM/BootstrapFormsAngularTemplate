@@ -7,7 +7,7 @@
 <br />
 <br />
 
-<div class="container">
+<div class="container" ng-controller="EPController as EPCtrl">
 
     <form role="form">
 
@@ -16,51 +16,52 @@
             <legend class="margin-bottom-underline">Employee Details:</legend>
             <div class="form-group">
                 <label for="firstName">First Name</label>
-                <input type="text" id="firstName" required placeholder="First name" class="form-control" />
+                <input type="text" id="firstName" required placeholder="First name" class="form-control" ng-model="EPCtrl.Employee.firstName" />
             </div>
 
             <div class="form-group">
                 <label for="lastName">Last Name</label>
-                <input type="text" value="" id="lastName" placeholder="Last name" class="form-control" />
+                <input type="text" value="" id="lastName" placeholder="Last name" class="form-control" ng-model="EPCtrl.Employee.lastName" />
             </div>
 
             <div class="form-group">
                 <label for="department">Department</label>
-                <select id="department" class="form-control"></select>
+                <select id="department" class="form-control" ng-model="EPCtrl.Employee.department"
+                        ng-options="d for d in EPCtrl.Departments"></select>
             </div>
         </fieldset>
 
         <fieldset class="margin-bottom-fieldset">
             <legend class="margin-bottom-underline">Payroll:</legend>
-            <div class="checkbox">
-                <label>Full Time<input id="fullTime" type="checkbox" /></label>
+            <div class="radio">
+                <label>Full Time<input name="payroll" type="radio" id="fulltime" value="ft" ng-model="EPCtrl.PayType" /></label>
             </div>
-            <div class="checkbox">
-                <label>Part Time<input id="partTime" type="checkbox" /></label>
+            <div class="radio">
+                <label>Part Time<input name="payroll" type="radio" id="parttime" value="pt" ng-model="EPCtrl.PayType" /></label>
             </div>
-            <div class="checkbox">
-                <label>Contract<input id="contract" type="checkbox" /></label>
+            <div class="radio">
+                <label>Contract<input name="payroll" type="radio" id="contract" value="ft" ng-model="EPCtrl.PayType" /></label>
             </div>
         </fieldset>
 
         <fieldset class="margin-bottom-fieldset">
             <legend class="margin-bottom-underline">Perks:</legend>
 
-            <div class="radio">
-                <label>Business Car<input name="perks" type="radio" id="perk-car" /></label>
+            <div class="checkbox">
+                <label>Business Car<input id="car" type="checkbox" ng-model="EPCtrl.Perks.BusinessCar" /></label>
             </div>
 
-            <div class="radio">
-                <label>Bonus<input type="radio" name="perks" id="perk-bonus" /></label>
+            <div class="checkbox">
+                <label>Bonus<input id="bonus" type="checkbox" ng-model="EPCtrl.Perks.Bonus" /></label>
             </div>
 
-            <div class="radio">
-                <label>Shares<input type="radio" name="perks" id="perk-sharaes" /></label>
+            <div class="checkbox">
+                <label>Shares<input id="shares" type="checkbox" ng-model="EPCtrl.Perks.Shares" /></label>
             </div>
         </fieldset>
 
         <div class="form-group">
-            <input type="submit" value="Submit" class="btn btn-primary btn-lg" />
+            <input type="submit" value="Submit" class="btn btn-primary btn-lg" ng-click="EPCtrl.submitForm()" />
         </div>
 
     </form>

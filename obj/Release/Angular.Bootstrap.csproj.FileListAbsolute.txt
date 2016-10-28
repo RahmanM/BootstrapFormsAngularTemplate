@@ -27,6 +27,6 @@ D:\rahman\Angular.Bootstrap\Angular.Bootstrap\bin\Newtonsoft.Json.xml
 D:\rahman\Angular.Bootstrap\Angular.Bootstrap\bin\System.Net.Http.Formatting.xml
 D:\rahman\Angular.Bootstrap\Angular.Bootstrap\bin\System.Web.Http.xml
 D:\rahman\Angular.Bootstrap\Angular.Bootstrap\bin\System.Web.Http.WebHost.xml
-D:\rahman\Angular.Bootstrap\Angular.Bootstrap\obj\Debug\Angular.Bootstrap.dll
-D:\rahman\Angular.Bootstrap\Angular.Bootstrap\obj\Debug\Angular.Bootstrap.pdb
-D:\rahman\Angular.Bootstrap\Angular.Bootstrap\obj\Debug\Angular.Bootstrap.csprojResolveAssemblyReference.cache
+D:\rahman\Angular.Bootstrap\Angular.Bootstrap\obj\Release\Angular.Bootstrap.csprojResolveAssemblyReference.cache
+D:\rahman\Angular.Bootstrap\Angular.Bootstrap\obj\Release\Angular.Bootstrap.dll
+D:\rahman\Angular.Bootstrap\Angular.Bootstrap\obj\Release\Angular.Bootstrap.pdb

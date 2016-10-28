@@ -36,7 +36,8 @@
                     <label for="department">Department</label>
                 </div>
                 <div class="col-md-9">
-                    <select id="department" class="form-control" ></select>
+                    <select id="department" class="form-control" ng-model="EPCtrl.Employee.department" 
+                            ng-options="d for d in EPCtrl.Departments"></select>
                 </div>
             </div>
         </fieldset>
@@ -50,7 +51,7 @@
                 </div>
                 <div class="col-md-9">
                     <div class="checkbox">
-                        <input id="car" type="checkbox" />
+                        <input id="car" type="checkbox" ng-model="EPCtrl.Perks.BusinessCar" />
                     </div>
                 </div>
             </div>
@@ -60,7 +61,7 @@
                 </div>
                 <div class="col-md-9">
                     <div class="checkbox">
-                        <input id="bonus" type="checkbox" />
+                        <input id="bonus" type="checkbox" ng-model="EPCtrl.Perks.Bonus" />
                     </div>
                 </div>
             </div>
@@ -71,7 +72,7 @@
                 </div>
                 <div class="col-md-9">
                     <div class="checkbox">
-                        <input id="shares" type="checkbox" />
+                        <input id="shares" type="checkbox" ng-model="EPCtrl.Perks.Shares" />
                     </div>
                 </div>
             </div>
@@ -81,21 +82,22 @@
         <fieldset class="margin-bottom-fieldset">
             <legend class="margin-bottom-underline">Payroll:</legend>
 
+            <!--By defining different value and assigning same name and ng-model we handle radio button group-->
             <div class="form-group">
                 <div class="col-md-3">
                     <label>Full time</label>
                 </div>
                 <div class="col-md-9">
-                    <input name="payroll" type="radio" id="fulltime" />
+                    <input name="payroll" type="radio" id="fulltime" value="ft" ng-model="EPCtrl.PayType" />
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="col-md-3">
-                    <label>Bonus</label>
+                    <label>Part time</label>
                 </div>
                 <div class="col-md-9">
-                    <input type="radio" name="payroll" id="parttime" />
+                    <input name="payroll" type="radio" id="parttime" value="pt" ng-model="EPCtrl.PayType" />
                 </div>
             </div>
 
@@ -104,7 +106,7 @@
                     <label>Contract</label>
                 </div>
                 <div class="col-md-9">
-                    <input type="radio" name="payroll" id="Contract" />
+                    <input name="payroll" type="radio" id="Contract" value="ct" ng-model="EPCtrl.PayType" />
                 </div>
             </div>
 

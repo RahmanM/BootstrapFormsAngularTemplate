@@ -7,7 +7,7 @@ app.service("EPService", function () {
     self.employee = {
         firstName: "Rahman",
         lastName: "Mahmoodi",
-        department: "Dev",
+        department: "Development",
         perks: ["car", "stock"],
         payrollType : "1"
     };
